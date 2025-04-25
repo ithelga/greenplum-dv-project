@@ -1,0 +1,9 @@
+services:
+  greenplum:
+    build: .
+    container_name: greenplum
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d
+      - ./data:/home/gpadmin/data
